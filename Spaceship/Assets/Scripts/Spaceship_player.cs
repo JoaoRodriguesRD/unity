@@ -21,9 +21,6 @@ public class Spaceship_player : MonoBehaviour
     {
         controlHorizontal();
         fire();
-        
-        
-
     }
     public void controlHorizontal(){
         horizontal = Input.GetAxisRaw("Horizontal");
@@ -36,9 +33,9 @@ public class Spaceship_player : MonoBehaviour
         }
     }
     public void fire(){
-        if (Input.GetButtonDown("Space"))
+        if (Input.GetKeyDown("space"))
         {
-            Instantiate(bullet, transform.position);
+            Instantiate(bullet, this.transform.position, this.transform.rotation);
         }
     }
 }

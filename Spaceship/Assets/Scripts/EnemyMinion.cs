@@ -18,9 +18,4 @@ public class EnemyMinion : Enemy
 
 
 
-    void deathLogic(){
-        if(life <= 0 ){
-            Destroy(gameObject);
-        }
-    }
 }

@@ -25,8 +25,6 @@ public class Spaceship_player : MonoBehaviour
     public void controlHorizontal(){
         horizontal = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(horizontal*runSpeed,0);
-            Debug.Log("in game");
-        
     }
     public void fire(){
         if (Input.GetKeyDown("space"))

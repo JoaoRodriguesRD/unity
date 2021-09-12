@@ -2,14 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMinion : MonoBehaviour
+public class EnemyMinion : Enemy 
 {
-    public int life = 10;
-    public void OnTriggerEnter2D(Collider2D collision){
-        Debug.Log("Esse inimigo foi atingido por: "+ collision.name);
-        if(collision.gameObject.tag == "Bullet"){
-            Debug.Log("Sofri dano!");
-        }
+    void Start()
+    {
+        life = 10;
+        rigidbody = GetComponent<Rigidbody2D>();
+    }
 
+    void Update()
+    {
+        deathLogic();
+        
+    }
+
+
+
+    void deathLogic(){
+        if(life <= 0 ){
+            Destroy(gameObject);
+        }
     }
 }

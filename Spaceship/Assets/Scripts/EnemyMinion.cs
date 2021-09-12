@@ -5,12 +5,11 @@ using UnityEngine;
 public class EnemyMinion : MonoBehaviour
 {
     public int life = 10;
-    void OnCollisionEnter2D(){
-        Debug.Log(" a");
-    }
-    void OnCollisionStay2D(){
-            //Output the message
-            Debug.Log(" b");
-        
+    public void OnTriggerEnter2D(Collider2D collision){
+        Debug.Log("Esse inimigo foi atingido por: "+ collision.name);
+        if(collision.gameObject.tag == "Bullet"){
+            Debug.Log("Sofri dano!");
+        }
+
     }
 }

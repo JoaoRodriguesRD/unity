@@ -13,22 +13,10 @@ public class Bullet : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         rb.velocity = new Vector2(0,speed);
         if(transform.position.y > 30){
             Destroy(gameObject);
         }
     }
-    void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log(" a");
-    }
-    void OnCollisionStay(Collision collision)
-    {
-            //Output the message
-            Debug.Log(" b");
-        
-    }
-
 }

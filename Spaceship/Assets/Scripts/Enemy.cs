@@ -4,19 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int life;
-    public float speed;
-    public Rigidbody2D rigidbody;
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+    private int life;
+    private float speed;
+    public Rigidbody2D rigidbody_enemy;
 
 
 
@@ -25,6 +15,9 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void walk(){
+        rigidbody_enemy.velocity = new Vector2(0,- speed);
+    }
 
     public void OnTriggerEnter2D(Collider2D collision){
         Debug.Log("Esse inimigo foi atingido por: "+ collision.name);
@@ -32,6 +25,22 @@ public class Enemy : MonoBehaviour
             Debug.Log("Sofri dano!");
             life --;
         }
+    }
+
+    public int getLife(){
+        return life;
+    }
+
+    public float getSpeed(){
+        return speed;
+    }
+
+    public void setLife(int life){
+        this.life = life;
+    }
+    public void setSpeed(float speed){
+        this.speed = speed;
 
     }
+
 }

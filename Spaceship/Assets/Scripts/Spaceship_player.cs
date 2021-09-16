@@ -21,6 +21,7 @@ public class Spaceship_player : MonoBehaviour
     {
         controlHorizontal();
         fire();
+        
     }
     public void controlHorizontal(){
         horizontal = Input.GetAxisRaw("Horizontal");

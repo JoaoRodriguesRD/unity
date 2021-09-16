@@ -14,9 +14,11 @@ public class Enemy : MonoBehaviour
         if(life <= 0){
             Destroy(gameObject);
         }
+
     }
     public void walk(){
         rigidbody_enemy.velocity = new Vector2(0,- speed);
+        
     }
 
     public void OnTriggerEnter2D(Collider2D collision){

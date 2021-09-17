@@ -6,15 +6,25 @@ public class EnemyMinion : Enemy
 {
     void Start()
     {
-        setLife(10);
+        setLife(1);
         setSpeed(0.01f);
         rigidbody_enemy = GetComponent<Rigidbody2D>();
+        this.gameObject.tag = "Enemy";
     }
 
     void Update()
     {
         deathLogic();
         walk();
+        enemyFire();
+    }
+    public void enemyFire(){
+        GameObject player = findSpaceship_player();
+        Debug.Log("position player: "+ player.transform.position);
+        bullet_enemy = new Bullet();
+        bullet_enemy.bullet_setVelocity(player.transform.position);
+        Instantiate(bullet_enemy, this.transform.position, this.transform.rotation);
+
     }
 
     public void walk(){

@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     private float speed;
     public Rigidbody2D rigidbody_enemy;
 
-
+    public Bullet bullet_enemy;
 
     public void deathLogic(){
         if(life <= 0){
@@ -19,6 +19,16 @@ public class Enemy : MonoBehaviour
     public void walk(){
         rigidbody_enemy.velocity = new Vector2(0,- speed);
         
+    }
+    public GameObject findSpaceship_player(){
+        GameObject gm = GameObject.FindWithTag("Player");
+        if(gm == null){
+            return null;
+        }else{
+            return gm;
+        }
+        
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision){

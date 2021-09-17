@@ -8,12 +8,14 @@ public class Spaceship_player : MonoBehaviour
     public float runSpeed = 10f;
     public Rigidbody2D rb;
 
-    public GameObject bullet;
+    public Bullet bullet;
     // Start is called before the first frame update
     void Start()
     {
             rb = GetComponent<Rigidbody2D>();
             rb.gravityScale = 0;
+            //definir a tag Player, foi usada para referenciar Player em Inimigo, assim o inimigo atira no angulo certo
+            this.gameObject.tag= "Player";
     }
 
     // Update is called once per frame
@@ -30,6 +32,7 @@ public class Spaceship_player : MonoBehaviour
     public void fire(){
         if (Input.GetKeyDown("space"))
         {
+            bullet.bullet_setVelocity(new Vector2(0,1));
             Instantiate(bullet, this.transform.position, this.transform.rotation);
         }
     }

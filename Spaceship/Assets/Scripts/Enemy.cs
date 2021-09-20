@@ -8,8 +8,6 @@ public class Enemy : MonoBehaviour
     private float speed;
     public Rigidbody2D rigidbody_enemy;
 
-    public Bullet bullet_enemy;
-
     public void deathLogic(){
         if(life <= 0){
             Destroy(gameObject);
@@ -32,7 +30,6 @@ public class Enemy : MonoBehaviour
     }
 
     public void OnTriggerEnter2D(Collider2D collision){
-        Debug.Log("Esse inimigo foi atingido por: "+ collision.name);
         if(collision.gameObject.tag == "Bullet"){
             Debug.Log("Sofri dano!");
             life --;

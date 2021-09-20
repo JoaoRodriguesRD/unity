@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //rb.velocity = velocidade;
+        rb.velocity = velocidade;
         this.gameObject.tag= "Bullet";
     }
 
@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag == "Enemy"){
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
         
     }

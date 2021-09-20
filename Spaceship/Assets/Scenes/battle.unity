@@ -471,7 +471,7 @@ GameObject:
   - component: {fileID: 1689608651}
   m_Layer: 0
   m_Name: Spaceship_player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -604,6 +604,79 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.73, y: 0.54}
   m_EdgeRadius: 0
+--- !u!1001 &1919729906
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2989268715396621900, guid: e41b9ba860285d54aa446917c4f9d7e0, type: 3}
+      propertyPath: m_Name
+      value: enemy_Bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989268715396621903, guid: e41b9ba860285d54aa446917c4f9d7e0, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989268715396621903, guid: e41b9ba860285d54aa446917c4f9d7e0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.6842
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989268715396621903, guid: e41b9ba860285d54aa446917c4f9d7e0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.0849
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989268715396621903, guid: e41b9ba860285d54aa446917c4f9d7e0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989268715396621903, guid: e41b9ba860285d54aa446917c4f9d7e0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989268715396621903, guid: e41b9ba860285d54aa446917c4f9d7e0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989268715396621903, guid: e41b9ba860285d54aa446917c4f9d7e0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989268715396621903, guid: e41b9ba860285d54aa446917c4f9d7e0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989268715396621903, guid: e41b9ba860285d54aa446917c4f9d7e0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989268715396621903, guid: e41b9ba860285d54aa446917c4f9d7e0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2989268715396621903, guid: e41b9ba860285d54aa446917c4f9d7e0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639417838643881904, guid: e41b9ba860285d54aa446917c4f9d7e0, type: 3}
+      propertyPath: m_Size.x
+      value: 0.043046534
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639417838643881904, guid: e41b9ba860285d54aa446917c4f9d7e0, type: 3}
+      propertyPath: m_Size.y
+      value: 0.05968809
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639417838643881904, guid: e41b9ba860285d54aa446917c4f9d7e0, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.00017800927
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639417838643881904, guid: e41b9ba860285d54aa446917c4f9d7e0, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.010985136
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e41b9ba860285d54aa446917c4f9d7e0, type: 3}
 --- !u!1001 &3493927439425541243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -617,7 +690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3493927440012189097, guid: 2efb6c814be02c440af14955749e7137, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.3
       objectReference: {fileID: 0}
     - target: {fileID: 3493927440012189097, guid: 2efb6c814be02c440af14955749e7137, type: 3}
       propertyPath: m_LocalPosition.y
@@ -655,6 +728,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3493927440012189099, guid: 2efb6c814be02c440af14955749e7137, type: 3}
+      propertyPath: fireRate
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3493927440012189099, guid: 2efb6c814be02c440af14955749e7137, type: 3}
+      propertyPath: bullet_enemy
+      value: 
+      objectReference: {fileID: 1164511252618110553, guid: e41b9ba860285d54aa446917c4f9d7e0, type: 3}
     - target: {fileID: 3493927440012189109, guid: 2efb6c814be02c440af14955749e7137, type: 3}
       propertyPath: m_Name
       value: Enemy

@@ -37,3 +37,6 @@ sysinfo.txt
 *.unitypackage
 
 .vscode
+
+# Pasta Logs
+Logs/

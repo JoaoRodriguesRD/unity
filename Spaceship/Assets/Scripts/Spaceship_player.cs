@@ -9,12 +9,11 @@ public class Spaceship_player : MonoBehaviour
     public Rigidbody2D rb;
 
     public Bullet bullet;
-    // Start is called before the first frame update
     void Start()
     {
             rb = GetComponent<Rigidbody2D>();
             rb.gravityScale = 0;
-            //definir a tag Player, foi usada para referenciar Player em Inimigo, assim o inimigo atira no angulo certo
+            
     }
 
     /// <summary>
@@ -22,20 +21,28 @@ public class Spaceship_player : MonoBehaviour
     /// </summary>
     void Awake()
     {
+        //definir a tag Player, foi usada para referenciar Player em Inimigo, assim o inimigo atira no angulo certo
+        //OBS: Se nao colocar em Awake pode dar erro quando carregar o jogo, pois outras classes buscarao o objeto com a tag Player
         this.gameObject.tag= "Player";
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         controlHorizontal();
         fire();
         
     }
+    /// <summary>
+    /// O player so se move na horizontal, ficando na posicao inferior da tela o tempo todo
+    /// </summary>
     public void controlHorizontal(){
         horizontal = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(horizontal*runSpeed,0);
     }
+    /// <summary>
+    /// Metodo para atirar com o botao espaco
+    /// </summary>
     public void fire(){
         if (Input.GetKeyDown("space"))
         {

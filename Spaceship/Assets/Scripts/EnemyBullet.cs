@@ -10,7 +10,7 @@ public class EnemyBullet : MonoBehaviour
     public Vector2 firstPosition;
     public GameObject player;
     public float lifetime = 4f;
-    // Start is called before the first frame update
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,8 +25,7 @@ public class EnemyBullet : MonoBehaviour
     {
         this.gameObject.tag= "EnemyBullet";
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         Destroy(gameObject,lifetime);

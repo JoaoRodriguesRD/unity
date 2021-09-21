@@ -9,6 +9,8 @@ public class Spaceship_player : MonoBehaviour
     public Rigidbody2D rb;
 
     public Bullet bullet;
+
+    public float shootSpeed = 5f;
     void Start()
     {
             rb = GetComponent<Rigidbody2D>();
@@ -46,7 +48,7 @@ public class Spaceship_player : MonoBehaviour
     public void fire(){
         if (Input.GetKeyDown("space"))
         {
-            bullet.bullet_setVelocity(new Vector2(1,1));
+            bullet.bullet_setVelocity(new Vector2(0,1) * shootSpeed);
             Instantiate(bullet, this.transform.position, this.transform.rotation);
         }
     }

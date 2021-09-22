@@ -24,7 +24,7 @@ public class EnemyMinion : Enemy
     void Update()
     {
         deathLogic();
-        //walk();
+        walk();
         enemyFire();
     }
     public void enemyFire(){

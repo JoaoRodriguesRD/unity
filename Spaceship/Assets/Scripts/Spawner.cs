@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public EnemyMinion enemy_n1;
+    public GameObject prefab_enemy;
     public Vector2 SpawnPosition;
     void Start()
     {
-        
+
     }
 
     void Update()
     {
-        if(Time.frameCount % 10 == 0){
-            Instantiate(enemy_n1, SpawnPosition, this.transform.rotation);
+        if(Time.frameCount % 2 == 0){
+            Instantiate(prefab_enemy, SpawnPosition, this.transform.rotation);
         }
         
     }

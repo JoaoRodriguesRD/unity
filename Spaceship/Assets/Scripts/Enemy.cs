@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
     public void deathLogic(){
         if(life <= 0){
             Destroy(gameObject);
+        }else if(transform.position.y < -5){
+            Destroy(gameObject);
         }
 
     }

@@ -37,7 +37,7 @@ public class GridMovement : MonoBehaviour
 
     private void MovePlayerLogic(Vector3 direction)
     {
-        ;
+        
         if(canMove(direction)){
             
             StartCoroutine(Move(direction));
